@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap');
+
+
+
+.link {
+  
+  
+    font-size: 5rem;
+    margin-top: 15%;
+    cursor: auto;
+    font-family: 'Inter', sans-serif;
+    
+    
+  }
+  @keyframes colorCycle {
+    0%, 55% {
+      filter: brightness(0) invert(1);
+    }
+    11%, 33% {
+      filter: none;
+    }
+  }
+
+  span {
+    padding: 0 0.67rem;
+    filter: brightness(0) invert(1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: colorCycle 10s ease-in-out infinite;
+    font-family: 'Inter', sans-serif;
+    line-height: 95px;
+    letter-spacing: -0.4rem;
+    
+    
+  }
+  
+  .start {
+    background-image: linear-gradient( 90deg, #007cf0, #00dfd8);
+    font-size: 100px;
+  }
+  
+  .tutor {
+    background-image:linear-gradient( 90deg, #7928ca , #ff0080 );
+    animation-delay: 3.33s;
+    font-size: 100px;
+  }
+  
+  .personalizado {
+    background-image: linear-gradient(90deg, #ff4d4d ,#f9cb28 );
+    animation-delay: 6.66s;
+    font-size: 100px;
+  }
+
+  .subtitle {
+    color: rgb(240, 240, 240);  
+    font-size: 30px;
+    padding: 0 0.67rem;
+    text-shadow:2px 2px black;
+    
+  
+  }
+  
+ .icon {
+    background: none;
+    border: none;
+    color: red;
+    
+ }
+
+ .journey {
+  
+  margin-left: 220px;
+  letter-color: rgb(90, 90, 90);
+  background: rgb(240, 240, 240);
+  color:rgb(60, 60, 60);
+  padding: .5rem  1.5rem;
+  font-family: "Inter";
+  font-weight:500;
+  border-radius:0.3rem;
+  font-size:20px;
+  cursor:pointer;
+  border: none;
+ }
+
+ .journey:hover {
+  background: black;
+  color: white;
+ }
+
+ 
+ 
+
+ 
+  
+ 
+  
