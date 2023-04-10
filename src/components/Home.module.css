@@ -25,7 +25,7 @@ span {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: colorCycle 8s ease-out infinite; 
+  animation: colorCycle 8s ease-out infinite;
   font-family: "Inter", sans-serif;
   line-height: 95px;
   letter-spacing: -0.4rem;
@@ -89,6 +89,7 @@ span {
 .journey:hover {
   background: black;
   color: white;
+  box-shadow: 0 0 5px 0 #fff, 0 0 10px 0 #00dfd8, 0 0 20px 0 #007cf0;
 }
 
 .quiz {
@@ -112,4 +113,7 @@ span {
 .buttonquiz:hover {
   background: black;
   color: white;
+  background: black;
+  color: white;
+  box-shadow: 0 0 5px 0 #fff, 0 0 10px 0 #f9cb28, 0 0 20px 0 #ff4d4d;
 }

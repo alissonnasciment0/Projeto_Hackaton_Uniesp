@@ -4,7 +4,7 @@ import { AiOutlineUser } from 'react-icons/ai';
 import {CardResult, TitleResult, ContentResult} from './styles.chatbot';
 import { BsFillSendFill , BsEraserFill } from "react-icons/bs";
 
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = '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';
 
 export function ChatGPT() {
   const [inputValue, setInputValue] = useState('');

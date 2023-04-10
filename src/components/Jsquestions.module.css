@@ -14,10 +14,10 @@
 
 
 .quizcontainer h2 {
-  aligh-itens: center;
+  align-itens: center;
   text-align: center;
   box-sizing: border-box;
-  weight: 500px;
+  width: 500px;
   color: rgb(245, 245, 245, 0.9);
   font-size: 30px;
   padding: 8px 15px;
@@ -101,9 +101,9 @@ transition: all 0.3s;
 .scorecontainer {
   text-align: center;
   display:grid;
-  aligh-itens: center;
+  align-itens: center;
   box-sizing: border-box;
-  weight: 500px;
+  width: 500px;
   color: rgb(245, 245, 245, 0.9);
   font-size: 30px;
   padding: 8px 15px;

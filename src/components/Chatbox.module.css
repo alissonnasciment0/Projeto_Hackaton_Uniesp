@@ -18,8 +18,8 @@ textarea {
   font-size: 20px;
   padding: 0.6rem 1.4rem;
   line-height: 1.5;
-  
-  
+  overflow: auto;
+  resize:none;
   
 }
 
@@ -32,16 +32,19 @@ textarea {
 }
 
 .result::-webkit-scrollbar {
-  background-color: #5e548e;
+  background-color: rgba(128, 128, 128, 0.3);
   width: 8px;
   border-radius:12px;
 }
 
 .result::-webkit-scrollbar-thumb {
-  background-color: #231942;
+  background-color: #5e548e;
+  border-radius: 20px;
   -ms-overflow-style: none;
-  
+  scrollbar-color: #231942 #5e548e;
+  scrollbar-width: thin;
 }
+
 
 .result {
   height: 50vh;
@@ -49,12 +52,9 @@ textarea {
   align-text: left;
   justify-content: center;
   border: 1px solid #5e548e;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 6px;
   font-size: 20px;
-  overflow-y: auto;
+  -ms-overflow-style: none;
   transition: all 0.5s ease-in-out;
 }
 
@@ -63,10 +63,7 @@ textarea {
 .value {
   align-text: left;
   margin-top:30px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius:12px;
   height: 55px;
   weight:100px;
   flex-direction: column;
@@ -78,13 +75,13 @@ textarea {
   
 }
 .value::-webkit-scrollbar {
-  background-color: #5e548e;
+  background-color: transparent;
   width: 8px;
   border-radius:12px;
 }
 
 .value::-webkit-scrollbar-thumb {
-  background-color: #231942;
+  background-color: transparent;
   -ms-overflow-style: none;
   
 }

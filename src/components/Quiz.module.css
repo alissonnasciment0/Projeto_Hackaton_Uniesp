@@ -12,8 +12,7 @@
   margin-right: 0px;
   margin-bottom: 0px;
   aligh-items: center;
-  box-shadow: 0 0 5px 0 #fff, 0 0 10px 0 #5e548e, 0 0 20px 0 #7928ca; 
-
+  box-shadow: 0 0 5px 0 #fff, 0 0 10px 0 #5e548e, 0 0 20px 0 #7928ca;
 }
 
 .quizstart {
@@ -41,54 +40,53 @@
   font-size: 14px;
   font-family: "montserrat";
   text-decoration: none;
-  margin-top:10px;
+  margin-top: 10px;
   border: 2px linear-gradient;
-  border-radius:10px;
+  border-radius: 10px;
   box-sizing: border-box;
   width: 300px;
   height: 40px;
   text-transform: uppercase;
   overflow: hidden;
   transition: 1s all ease;
-  background-color:   #7928ca;
+  background-color: #7928ca;
 }
 
 .programacao::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	background-color: rgba(255,255,255,0.1);
-	transition: all 0.3s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
 }
 .programacao:hover::before {
-	opacity: 0 ;
-	transform: scale(0.5,0.5);
+  opacity: 0;
+  transform: scale(0.5, 0.5);
 }
 .programacao::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	opacity: 0;
-	transition: all 0.3s;
-	border: 1px solid rgba(255,255,255,0.5);
-	transform: scale(1.2,1.2);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
 }
 .programacao:hover::after {
-	opacity: 1;
-	transform: scale(1,1);
+  opacity: 1;
+  transform: scale(1, 1);
 }
 
-
 .title {
-  margin-top:40px;
+  margin-top: 40px;
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 64px;
@@ -97,7 +95,6 @@
   text-align: center;
   text-transform: uppercase;
 }
-
 
 .welcome {
   margin-top: 3px;
@@ -109,7 +106,7 @@
 .choice {
   font-family: "montserrat";
   font-size: 20px;
-  font-weight:bold;
+  font-weight: bold;
   margin-top: 25px;
   color: rgb(245, 245, 245, 0.9);
 }
@@ -127,13 +124,11 @@
   margin-bottom: 10px;
 }
 
-
-
 .return {
   position: absolute;
   font-weight: bold;
-  font-size:15px;
-  bottom: 120px;
+  font-size: 15px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -148,5 +143,3 @@
   outline: none;
   transition: 1s ease-in-out;
 }
-
-
