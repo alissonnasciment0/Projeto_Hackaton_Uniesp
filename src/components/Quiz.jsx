@@ -89,9 +89,12 @@ export function Quiz() {
       {showReact && <Reactquestions />}
 
       {!showQuiz && (
-        <button className={style.return} onClick={handleBackClick}>
+        <div className={style.returnbuttoncontainer}>
+          <button className={style.return} onClick={handleBackClick}>
           <BsFillCaretLeftSquareFill/> &nbsp; Voltar
         </button>
+        </div>
+        
       )}
     </div>
   );

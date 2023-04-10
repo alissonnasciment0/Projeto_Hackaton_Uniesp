@@ -81,10 +81,14 @@ export function Jsquestions() {
 
 
       {showScore ? (
-        <div className={style.scorecontainer}>
+        <div className={style.returncontainer}>
+            <div className={style.scorecontainer}>
           Você acertou {score} de {quizData.length} perguntas.
           <button onClick={handleResetButtonClick}>Jogar novamente</button>
         </div>
+
+        </div>
+        
       ) : (
         <>
           <div className={style.questioncontainer}>

@@ -19,22 +19,22 @@ textarea {
   padding: 0.6rem 1.4rem;
   line-height: 1.5;
   overflow: auto;
-  resize:none;
-  
+  resize: none;
 }
 
-.inputValue{
-  background-color:white;
+.inputValue {
+  background-color: white;
 }
 
-.result , .value:focus {
+.result,
+.value:focus {
   outline: none;
 }
 
 .result::-webkit-scrollbar {
   background-color: rgba(128, 128, 128, 0.3);
   width: 8px;
-  border-radius:12px;
+  border-radius: 12px;
 }
 
 .result::-webkit-scrollbar-thumb {
@@ -44,7 +44,6 @@ textarea {
   scrollbar-color: #231942 #5e548e;
   scrollbar-width: thin;
 }
-
 
 .result {
   height: 50vh;
@@ -58,35 +57,29 @@ textarea {
   transition: all 0.5s ease-in-out;
 }
 
-
-
 .value {
   align-text: left;
-  margin-top:30px;
-  border-radius:12px;
+  margin-top: 30px;
+  border-radius: 12px;
   height: 55px;
-  weight:100px;
+  weight: 100px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 2px solid #5e548e;
   overflow-y: auto;
   transition: all 0.5s ease-in-out;
-  
 }
 .value::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
-  border-radius:12px;
+  border-radius: 12px;
 }
 
 .value::-webkit-scrollbar-thumb {
   background-color: transparent;
   -ms-overflow-style: none;
-  
 }
-
-
 
 .inputButton {
   display: flex;
@@ -106,7 +99,7 @@ textarea {
   position: relative;
   background-color: transparent;
   border: none;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   padding: 15px;
   width: 50px;
   text-align: center;
@@ -118,9 +111,8 @@ textarea {
 }
 
 .send:hover {
-
-  box-shadow: 0px 2px 10px 5px rgb(26, 188, 156,0.6);
-  color: rgba(255,255,255,0.8);
+  box-shadow: 0px 2px 10px 5px rgb(26, 188, 156, 0.6);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .send:after {
@@ -133,18 +125,20 @@ textarea {
   margin-left: -20px !important;
   margin-top: -120%;
   opacity: 0;
-  transition: all 2s
+  transition: all 2s;
 }
 
 .send:active:after {
   padding: 0;
   margin: 0;
   opacity: 1;
-  transition: 0s
+  transition: 0s;
 }
 
-.send,.clear :focus { outline:0; }
-
+.send,
+.clear :focus {
+  outline: 0;
+}
 
 .clear {
   text-align: center;
@@ -155,7 +149,7 @@ textarea {
   position: relative;
   background-color: transparent;
   border: none;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   padding: 15px;
   width: 50px;
   text-align: center;
@@ -167,13 +161,13 @@ textarea {
 }
 
 .clear:hover {
-  color: rgba(255,255,255,0.8);
-  box-shadow: 0px 2px 10px 5px rgb(220,20,60,0.7);
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 2px 10px 5px rgb(220, 20, 60, 0.7);
 }
 
 .clear:after {
   content: "";
-  background: rgb(220,20,60,0.7);
+  background: rgb(220, 20, 60, 0.7);
   display: block;
   position: absolute;
   padding-top: 300%;
@@ -181,14 +175,33 @@ textarea {
   margin-left: -20px;
   margin-top: -120%;
   opacity: 0;
-  transition: all 2s
+  transition: all 2s;
 }
 
 .clear:active:after {
   padding: 0;
   margin: 0;
   opacity: 1;
-  transition: 0s
+  transition: 0s;
 }
 
+@media screen and (max-width: 900px) {
+  textarea {
+    width: 100%;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .value {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .value {
+    height: 120px;
+  }
+}
