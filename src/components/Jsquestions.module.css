@@ -103,7 +103,7 @@
   color: rgb(245, 245, 245, 0.9);
   font-size: 2vw;
   text-shadow: 3px 5px 5px #5e548e;
-  margin-top:25vh;
+  margin-top: 25vh;
 }
 
 .scorecontainer button {
@@ -187,5 +187,20 @@
 
   .scorecontainer {
     font-size: 4vw;
+  }
+  .quizcontainer h2 {
+    text-align: center;
+    aligh-itens: center;
+    box-sizing: border-box;
+    color: rgb(245, 245, 245, 0.9);
+    font-size: 4vw;
+    text-shadow: 3px 5px 5px #5e548e;
+    margin-top: 3vh;
+  }
+  .answercontainer button {
+    position: relative;
+    display: block;
+    color: white;
+    font-size: 1.2vh;
   }
 }

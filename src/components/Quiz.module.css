@@ -162,18 +162,20 @@
 
 @media (max-width: 425px) {
   .quizstart {
-    width: 35vw;
-    height: 35vh;
+  width: 42vw;
+  height: 67vh;
   }
   .programacao {
-    font-size: 1.8vw;
-    margin-top: 2vw;
+    font-size: 2vw;
+    spacing-bottom:4vh;
+    
+    width: 35vw;
+    height: 5vh;
+    margin-top: 3vh;
     box-shadow: 0 0 0.9px 0 #fff;
     border: none;
     border-radius: 7px;
     box-sizing: border-box;
-    width: 17vw;
-    height: 3.5vw;
     text-transform: uppercase;
     overflow: hidden;
     transition: 1s all ease;
@@ -182,15 +184,15 @@
 
   .title {
     margin-top: 3.5vh;
-    font-size: 3.8vw;
+    font-size: 8vw;
   }
 
   .welcome {
-    font-size: 1.5vw;
+    font-size: 3vw;
   }
 
   .choice {
-    font-size: 1.5vw;
+    font-size: 3vw;
     margin-top: 0.6vh;
   }
 
