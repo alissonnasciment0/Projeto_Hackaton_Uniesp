@@ -9,49 +9,6 @@
   text-align: center;
 }
 
-@media (max-width: 600px) {
-  /* alterações para telas menores que 600px */
-  .link {
-    font-size: 3rem;
-    margin-top: 10%;
-  }
-
-  span {
-    font-size: 3rem;
-    line-height: 60px;
-    letter-spacing: -0.2rem;
-  }
-
-  .start,
-  .tutor,
-  .personalizado {
-    font-size: 16vw;
-  }
-
-  .subtitle {
-    font-size: 4vw;
-  }
-
-  .icon {
-    font-size: 4vw;
-    margin-bottom: 10px;
-  }
-
-  .journey {
-    font-size: 2vw;
-    padding: 0.5vw 1.5vw;
-  }
-
-  .quiz {
-    font-size: 3rem;
-  }
-
-  .buttonquiz {
-    font-size: 2vw;
-    padding: 0.5vw 1.2vw;
-  }
-}
-
 /* Estilos para tela grande continuam aqui */
 @keyframes colorCycle {
   0%,
@@ -139,7 +96,7 @@ span {
 }
 
 .quiz {
-  margin-top: 20px;
+  margin-top: 7vh;
   cursor: auto;
   font-family: "Inter", sans-serif;
   text-align: center;
@@ -162,4 +119,83 @@ span {
   background: black;
   color: white;
   box-shadow: 0 0 5px 0 #fff, 0 0 10px 0 #f9cb28, 0 0 20px 0 #ff4d4d;
+}
+
+@media (max-width: 600px) {
+  /* alterações para telas menores que 600px */
+
+  .start,
+  .tutor,
+  .personalizado {
+    font-size: 12vw;
+    letter-spacing: 0.05vw;
+  }
+
+  .subtitle {
+    font-size: 5vw;
+  }
+
+  .journey {
+    background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+    color: black;
+    padding: 1vw 4.7vw;
+    font-family: "Inter";
+    font-weight: 500;
+    border-radius: 0.3rem;
+    font-size: 3.5vw;
+    cursor: pointer;
+    border: none;
+  }
+
+  .journey:hover {
+    background: black;
+    color: white;
+    box-shadow: 0 0 5px 0 #fff, 0 0 10px 0 #00dfd8, 0 0 20px 0 #007cf0;
+  }
+
+  .quiz {
+    margin-top: 1vh;
+    cursor: auto;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+  }
+  .buttonquiz {
+    background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+    color: black;
+    padding: 1vw 2.5vw;
+    font-family: "Inter";
+    font-weight: 500;
+    border-radius: 0.3rem;
+    font-size: 3.5vw;
+    cursor: pointer;
+    border: none;
+  }
+
+  .buttonquiz:hover {
+    background: black;
+    color: white;
+    background: black;
+    color: white;
+    box-shadow: 0 0 5px 0 #fff, 0 0 10px 0 #f9cb28, 0 0 20px 0 #ff4d4d;
+  }
+
+  .icon {
+    background-color: rgb(121, 40, 202, 0.2);
+    border: 1px solid #7928ca;
+    color: rgb(245, 245, 245, 0.9);
+    padding: 0.4vw 0.8vw;
+    font-family: "Inter";
+    font-weight: 500;
+    border-radius: 0.2rem;
+    font-size: 4vw;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px 0 #fff, 0 0 5px 0 #5e548e, 0 0 13px 0 #7928ca;
+  }
+
+  .icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px 0 #fff, 0 0 10px 0 #5e548e, 0 0 20px 0 #7928ca;
+  }
 }

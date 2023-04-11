@@ -1,34 +1,31 @@
 .quizcontainer {
-  display:flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
   text-align: justify;
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  width: 600px;
-  height: 500px;
+  width: 42vw;
+  height: 67vh;
   margin: 0 0 0 0;
 }
 
 .quizcontainer h2 {
-  align-itens: center;
   text-align: center;
+  aligh-itens: center;
   box-sizing: border-box;
-  width: 500px;
   color: rgb(245, 245, 245, 0.9);
-  font-size: 30px;
-  padding: 8px 15px;
-  border-radius:10px;
+  font-size: 2.5vw;
   text-shadow: 3px 5px 5px #5e548e;
+  margin-top: 3vh;
 }
 
 .questioncontainer {
   background: transparent;
-  padding: 10px;
-  border-radius: 10px;
-  width: 500px;
-
-  min-height: 200px;
+  padding: 1vh;
+  border-radius: 1vw;
+  width: 40vw;
+  min-height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,48 +35,47 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 10px;
+  gap: 1vh;
 }
 
 .answercontainer button {
   position: relative;
   display: block;
   color: white;
-  font-size: 14px;
+  font-size: 0.8vw;
   font-family: "montserrat";
   text-decoration: none;
-  margin-top:8px;
-  border:none;
-  border-radius:10px;
+  margin-top: 0.8vh;
+  border: none;
+  border-radius: 1vw;
   box-sizing: border-box;
-  box-shadow: 0 0 15px 0 #7928ca,0 0 0.9px 0 #fff;
-  width: 500px;
-  height: 40px;
+  width: 35vw;
+  height: 5vh;
   text-transform: uppercase;
   overflow: hidden;
   transition: 1s all ease;
   background-color: #7928ca;
+  box-shadow: 0 0 15px 0 #7928ca, 0 0 0.9px 0 #fff;
 }
 
-.answercontainer button::before{
-  content: '';
+.answercontainer button::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: rgba(121,255,255,0.1);
+  background-color: rgba(121, 255, 255, 0.1);
   transition: all 0.3s;
 }
 
 .answercontainer button:hover::before {
-  opacity: 0 ;
-  transform: scale(0.5,0.5);
+  opacity: 0;
+  transform: scale(0.5, 0.5);
 }
-
 .answercontainer button::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -89,81 +85,67 @@
   opacity: 0;
   transition: all 0.3s;
   border: none;
-  transform: scale(1.2,1.2);
+  transform: scale(1.2, 1.2);
 }
-
 .answercontainer button:hover::after {
   opacity: 1;
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
-.returncontainer {
+.scorecontainer {
+  position: relative;
+  margin: auto;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  aligh-itens: center;
   box-sizing: border-box;
-  width: 100%;
-  max-width: 500px;
-  box-sizing: border-box;
+  weight: 40vw;
   color: rgb(245, 245, 245, 0.9);
-  font-size: 30px;
-  padding: 8px 15px;
-  border-radius:10px;
+  font-size: 2vw;
   text-shadow: 3px 5px 5px #5e548e;
-}
-
-.scorecontainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 180px;
+  margin-top:25vh;
 }
 
 .scorecontainer button {
   position: relative;
   display: grid;
+  align-items: center;
   color: white;
-  align-items: center; 
-  font-size: 14px;
+  font-size: 1vw;
   font-family: "montserrat";
   text-decoration: none;
-  margin-top:20px;
-  border: none;
-  border-radius:10px;
+  margin-top: 2vw;
+  margin-left: 6vw;
+  border-radius: 10px;
   box-sizing: border-box;
-  width: 200px;
-  height: 40px;
+  width: 18vw;
+  height: 4.5vh;
   text-transform: uppercase;
   overflow: hidden;
   transition: 1s all ease;
   background-color: #7928ca;
-  box-shadow: 0 0 60px 0 #fff;
-
-
-
+  box-shadow: 0 0 0.9px 0 #fff;
+  border: none;
 }
 
-.scorecontainer button::before{
-  content: '';
+.scorecontainer button::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: rgba(121,255,255,0.1);
+  background-color: rgba(121, 255, 255, 0.1);
   transition: all 0.3s;
 }
 
 .scorecontainer button:hover::before {
-  opacity: 0 ;
-  transform: scale(0.5,0.5);
+  opacity: 0;
+  transform: scale(0.5, 0.5);
 }
 .scorecontainer button::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -171,11 +153,39 @@
   height: 100%;
   z-index: 1;
   opacity: 0;
-  transition: all 0.5s;
-  transform: scale(1.2,1.2);
+  transition: all 0.3s;
+  transform: scale(1.2, 1.2);
 }
 .scorecontainer button:hover::after {
   opacity: 1;
-  transform: scale(1,2);
+  transform: scale(1, 1);
 }
 
+@media (max-width: 425px) {
+  .scorecontainer button {
+    position: relative;
+    display: grid;
+    align-items: center;
+    color: white;
+    font-size: 1vh;
+    padding: 1vw;
+    font-family: "montserrat";
+    text-decoration: none;
+    margin-top: 5vw;
+    margin-left: 12.7vw;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 18vw;
+    height: 4.5vh;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+    background-color: #7928ca;
+    box-shadow: 0 0 0.9px 0 #fff;
+    border: none;
+  }
+
+  .scorecontainer {
+    font-size: 4vw;
+  }
+}

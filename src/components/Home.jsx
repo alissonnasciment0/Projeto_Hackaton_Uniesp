@@ -24,8 +24,8 @@ export function Home() {
   };
 
   return (
-    
-    <div>
+      <div className={style.homecontainer}>
+        <div>
       {showChat && <button className={`${style.exit} ${style.icon} `} onClick={handleBackClick}> <BsHouseDoorFill /> </button>}
       {showQuiz && <button className={`${style.exit} ${style.icon} `} onClick={handleBackClick}> <BsHouseDoorFill /> </button>}
       
@@ -49,5 +49,7 @@ export function Home() {
       
       {showQuiz && <Quiz />}
     </div>
+      </div>
+    
   );
 }

@@ -2,7 +2,7 @@ import style from './Chatbox.module.css';
 import { useState } from 'react';
 import { BsFillSendFill , BsEraserFill } from "react-icons/bs";
 
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = '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';
 
 export function ChatGPT() {
   const [inputValue, setInputValue] = useState('');
@@ -29,7 +29,6 @@ export function ChatGPT() {
         prompt: "Explique de maneira tecnica:" + sQuestion,
         max_tokens: 2048,
         temperature: 0.5,
-        
       }),
     })
       .then((response) => response.json())
