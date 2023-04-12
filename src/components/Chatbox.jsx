@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import style from './Chatbox.module.css';
 import { BsFillSendFill , BsEraserFill } from "react-icons/bs";
 
-const apiKey = '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';
+const apiKey = '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';
 
 export function ChatGPT() {
   const [message, setMessage] = useState('');
@@ -28,7 +28,7 @@ export function ChatGPT() {
         },
         body: JSON.stringify({
             model: "text-davinci-003",
-            prompt: "Explique de maneira tecnica:" + message,
+            prompt: "Responda como um professor:" + message,
             max_tokens: 2048,
             temperature: 0.5
         })
