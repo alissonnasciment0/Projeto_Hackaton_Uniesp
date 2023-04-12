@@ -1,109 +1,95 @@
+import React, { useState } from 'react';
 import style from './Chatbox.module.css';
-import { useState } from 'react';
 import { BsFillSendFill , BsEraserFill } from "react-icons/bs";
 
-const OPENAI_API_KEY = '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';
+const apiKey = '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';
 
 export function ChatGPT() {
-  const [inputValue, setInputValue] = useState('');
-  const [resultValue, setResultValue] = useState('');
+  const [message, setMessage] = useState('');
+  const [history, setHistory] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  
 
-  const handleKeyPress = (e) => {
-    if (inputValue && e.key === 'Enter') sendQuestion();
-  };
+  function handleSubmit(e) {
+    e.preventDefault();
 
-  const sendQuestion = () => {
-    const sQuestion =  inputValue;
-    setInputValue('Carregando...');
-    setResultValue((prevResult) => prevResult + `\n 👤 \n ${sQuestion} \n `);
+    if (!message) {
+      return;
+    }
 
-    fetch('https://api.openai.com/v1/completions', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + OPENAI_API_KEY,
-      },
-      body: JSON.stringify({
-        model: 'text-davinci-003',
-        prompt: "Explique de maneira tecnica:" + sQuestion,
-        max_tokens: 2048,
-        temperature: 0.5,
-      }),
+    setIsLoading(true);
+
+    fetch("https://api.openai.com/v1/completions",{
+        method: 'POST',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+            model: "text-davinci-003",
+            prompt: "Explique de maneira tecnica:" + message,
+            max_tokens: 2048,
+            temperature: 0.5
+        })
     })
-      .then((response) => response.json())
-      .then((json) => {
+    .then((response) => response.json())
+    .then((response) => {
+        let r = response.choices[0]['text']
+        setHistory([...history, { message, response: r }]);
+    })
+    .catch((e) => {
+        console.log(`Error -> ${e}`)
+    })
+    .finally(() => {
+        setIsLoading(false);
+        setMessage('');
+    })
+  }
+// deletar chat 
+function handleClear() {
+  setHistory([]);
 
-       
-        if (resultValue) setResultValue((prevResult) => prevResult + '\n' );
-
-        if (json.error?.message) {
-          setResultValue(
-            (prevResult) => prevResult + `Error: ${json.error.message}`
-          );
-        } else if (json.choices?.[0].text) {
-          const text = json.choices[0].text || 'Sem resposta';
-
-          setResultValue((prevResult) =>  prevResult + `\n 👨‍💻 ${text} \n`);
-        }
-
-        setResultValue((prevResult) => {
-          const resultTextArea = document.getElementById('result');
-          resultTextArea.scrollTop = resultTextArea.scrollHeight;
-          return prevResult;
-        });
-      })
-      
-      .catch((error) => console.error('Error:', error))
-      .finally(() => {
-        setInputValue('');
-        const inputTextArea = document.getElementById('inputQuestion');
-        inputTextArea.focus();
-      });
-  };
-
-  const handleClear = () => {
-    setResultValue('');
-  };
-  const handleSendQuestion = () => {
-    if (inputValue) sendQuestion();
-  };
-
+}
   return (
-    <div className={style.content}>
-      <div className={style.textareaWrapper}>
-        
-        <textarea
-          disabled
-          className={style.result}
-          id="result"
-          rows="10"
-          value={resultValue}
-          placeholder="Resposta do Tutor"
-        ></textarea>
 
-        <div className={style.inputWrapper}>
-          <textarea
-            className={style.value}
-            id="inputQuestion"
-            value={inputValue}
-            rows="5"
-            placeholder="Digite a sua pergunta"
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyPress={handleKeyPress}
-            disabled={inputValue === 'Carregando...'}
-          ></textarea>
-
-          <div className={style.inputButton}>
-            <button className={style.send} onClick={handleSendQuestion}>
-              < BsFillSendFill /> 
-            </button>
-            <button className={style.clear} onClick={handleClear}>
-              <strong> < BsEraserFill /></strong>
-            </button>
+    <div> 
+       <div className={style.container}>
+      <p className={style.carregando} id="status">{isLoading ? 'Carregando...' : ''}</p>
+      <div id="history">
+        {history.map((item, index) => (
+          <div key={index}>
+            <div className={style.boxmessage}>
+              <p className={style.message}>{item.message}</p>
+            </div>
+            <div className={style.response}>
+              <p className={style.result}>{item.response}</p>
+            </div>
           </div>
+        ))}
+      </div>     
+       </div>
+       <form onSubmit={handleSubmit}>
+        <div className={style.value}>
+          <input type="text" id="message-input"  className={style.input} placeholder="Pergunte aqui..." value={message} onChange={(e) => setMessage(e.target.value)} />
         </div>
+      </form> 
+
+      <div className={style.inputButton}>
+          <button className={style.send} onClick={handleSubmit} type="submit" disabled={isLoading}> <BsFillSendFill /> </button>
+          <button className={style.clear} onClick={handleClear} > <BsEraserFill /> </button>
       </div>
     </div>
+   
   );
 }
+
+
+
+
+
+
+
+
+
+
