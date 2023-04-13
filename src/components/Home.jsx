@@ -30,13 +30,27 @@ export function Home() {
       {showQuiz && <button className={`${style.exit} ${style.icon} `} onClick={handleBackClick}> <BsHouseDoorFill /> </button>}
       
       {!showChat && !showQuiz &&
-        <div className={`${style.inicar} ${style.link}`}>
+
+      <div>
+             <div className={`${style.inicar} ${style.link}`}>
           <span className={style.start}><strong>Guia</strong></span>
           <span className={style.tutor}><strong>do</strong></span>
           <span className={style.personalizado}><strong>Saber</strong></span>
           <h2 className={style.subtitle}><strong>Aprenda com praticidade!</strong></h2>
           <button className={style.journey} onClick={handleChatClick}><strong> <BsSlack/>  &nbsp; Chat de aprendizagem </strong> </button>
         </div>
+
+        <div className={style.menu}>
+          <nav className={style.navbar}>
+            <ul className={style.link}>
+              <li><a href="">Home</a></li>
+              <li><a href="">Developers</a></li>
+              <li><a href="">Sobre</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+   
       }
 
       {showChat && <ChatGPT />}

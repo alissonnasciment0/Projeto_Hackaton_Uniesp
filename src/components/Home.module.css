@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap");
 
+.menu {
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.navbar ul {
+  display: flex;
+  top: 0;
+  left: 0;
+  
+}
+
+
 /* Estilos para tela grande */
 .link {
   font-size: 5rem;

@@ -14,7 +14,6 @@
   border-radius: 1.8vh;
   overflow: auto;
   border: 0.18vh solid #5e548e;
-  recize: none;
 }
 .container::-webkit-scrollbar {
   background-color: rgba(128, 128, 128, 0.3);

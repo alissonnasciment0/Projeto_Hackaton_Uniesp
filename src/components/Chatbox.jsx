@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import style from './Chatbox.module.css';
 import { BsFillSendFill , BsEraserFill } from "react-icons/bs";
 
-const apiKey = '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';
+const apiKey = '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';
 
 export function ChatGPT() {
   const [message, setMessage] = useState('');
