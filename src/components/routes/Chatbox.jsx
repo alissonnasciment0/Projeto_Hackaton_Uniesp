@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import style from './Chatbox.module.css';
+import style from '../Chatbox.module.css';
 import { BsFillSendFill , BsEraserFill } from "react-icons/bs";
+import { Navbar } from './Navbar';
 
-const apiKey = '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';
+const apiKey = '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';
 
 export function ChatGPT() {
   const [message, setMessage] = useState('');
   const [history, setHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [showChat, setShowChat] = useState(false);
+  const [showQuiz, setShowQuiz] = useState(false);
   
 
   function handleSubmit(e) {
@@ -28,7 +31,7 @@ export function ChatGPT() {
         },
         body: JSON.stringify({
             model: "text-davinci-003",
-            prompt: "Responda como um professor:" + message,
+            prompt: "Explique de maneira tecnica:" + message,
             max_tokens: 2048,
             temperature: 0.5
         })
@@ -51,10 +54,31 @@ function handleClear() {
   setHistory([]);
 
 }
+
+
+const handleBackClick = () => {
+  setShowChat(false);
+  setShowQuiz(false);
+};
+
   return (
 
     <div> 
+
+      < Navbar />
        <div className={style.container}>
+
+       {showChat && (
+          <button
+            className={`${style.exit} ${style.icon} `}
+            onClick={handleBackClick}
+          >
+            {" "}
+            <BsHouseDoorFill />{" "}
+          </button>
+        )}
+
+
       <p className={style.carregando} id="status">{isLoading ? 'Carregando...' : ''}</p>
       <div id="history">
         {history.map((item, index) => (
@@ -83,13 +107,3 @@ function handleClear() {
    
   );
 }
-
-
-
-
-
-
-
-
-
-

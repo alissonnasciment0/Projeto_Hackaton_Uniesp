@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import style from './Quiz.module.css';
-import { Jsquestions } from './Jsquestions.jsx';
-import { Pyquestions } from './Pyquestions.jsx';
-import { Cssquestions } from './CssQuestions';
-import { Htmlquestions } from './Htmlquestions';
-import { Reactquestions } from './Reactquestions';
+import React, { useState } from "react";
+import style from "../Quiz.module.css";
+import { Jsquestions } from "../Jsquestions.jsx";
+import { Pyquestions } from "../Pyquestions.jsx";
+import { Cssquestions } from "../CssQuestions";
+import { Htmlquestions } from "../Htmlquestions";
+import { Reactquestions } from "../Reactquestions";
 import { BsFillCaretLeftSquareFill } from "react-icons/bs";
-
+import { Navbar } from "./Navbar";
 
 export function Quiz() {
   const [showJs, setShowJs] = useState(false);
@@ -33,12 +33,12 @@ export function Quiz() {
   const handleHtmlClick = () => {
     setShowHtml(true);
     setShowQuiz(false);
-  }
+  };
 
   const handleReactClick = () => {
     setShowReact(true);
     setShowQuiz(false);
-  }
+  };
 
   const handleBackClick = () => {
     setShowJs(false);
@@ -47,10 +47,12 @@ export function Quiz() {
     setShowCss(false);
     setShowHtml(false);
     setShowReact(false);
-  }
+  };
 
   return (
-    <div className= {style.quizcontainerstart} >
+    <div className={style.quizcontainerstart}>
+      <Navbar />
+
       {showQuiz && (
         <>
           <div className={style.quizstart}>
@@ -62,19 +64,39 @@ export function Quiz() {
             </h3>
             <p className={style.choice}>Escolha o seu desafio : </p>
             <div className={style.midle}>
-              <button className={style.programacao} onClick={handleJsClick} disabled={showJs}>
+              <button
+                className={style.programacao}
+                onClick={handleJsClick}
+                disabled={showJs}
+              >
                 Javascript
               </button>
-              <button className={style.programacao} onClick={handlePyClick} disabled={showPy}>
+              <button
+                className={style.programacao}
+                onClick={handlePyClick}
+                disabled={showPy}
+              >
                 Python
               </button>
-              <button className={style.programacao} onClick={handleCssClick} disabled={showCss}>
+              <button
+                className={style.programacao}
+                onClick={handleCssClick}
+                disabled={showCss}
+              >
                 Css
               </button>
-              <button className={style.programacao} onClick={handleHtmlClick} disabled={showHtml}>
+              <button
+                className={style.programacao}
+                onClick={handleHtmlClick}
+                disabled={showHtml}
+              >
                 Html
               </button>
-              <button className={style.programacao} onClick={handleReactClick} disabled={showReact}>
+              <button
+                className={style.programacao}
+                onClick={handleReactClick}
+                disabled={showReact}
+              >
                 React
               </button>
             </div>
@@ -91,10 +113,9 @@ export function Quiz() {
       {!showQuiz && (
         <div className={style.returnbuttoncontainer}>
           <button className={style.return} onClick={handleBackClick}>
-          <BsFillCaretLeftSquareFill/> &nbsp; Voltar
-        </button>
+            <BsFillCaretLeftSquareFill /> &nbsp; Voltar
+          </button>
         </div>
-        
       )}
     </div>
   );

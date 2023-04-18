@@ -99,7 +99,7 @@
   display: grid;
   aligh-itens: center;
   box-sizing: border-box;
-  width: 40vw;
+  weight: 40vw;
   color: rgb(245, 245, 245, 0.9);
   font-size: 2vw;
   text-shadow: 3px 5px 5px #5e548e;
