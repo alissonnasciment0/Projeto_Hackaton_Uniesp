@@ -3,14 +3,14 @@
 
 .navbar {
   background: transparent;
-  position: fixed;
-  top: 15px;
+  position: absolute;
+  top: 1rem;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 1.8rem;
   display: flex;
   justify-content: center;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: bold;
   font-family: "Inter", sans-serif;
 }
@@ -18,15 +18,15 @@
 .navbar ul {
   display: flex;
   list-style-type: none;
-  margin-top: 10px;
+  margin-top: 0.6rem;
   color: rgb(245, 245, 245, 0.6);
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
 }
 
 .navbar li {
   text-decoration: none;
   padding: 0 1.2rem;
-  margin-top: 5px;
+  margin-top: 0.3rem;
   border: none; 
 }
 
@@ -63,8 +63,8 @@
 
 .developers {
   width: 100%;
-  height: 25px;
-  padding-left: 15px;
+  height: 1.56rem;
+  padding-left: 1rem;
 }
 
 .developers.active,
@@ -72,13 +72,13 @@
   background: rgb(192, 192, 192, 0.020);;
   border: 0.5px solid rgb(192, 192, 192, 0.2);
   
-  border-radius: 12px;
+  border-radius: 0.75rem;
   
   
 }
 
 .chevronIcon {
-  font-size: 12px;
+  font-size: 0.75rem;
   align-items: center;
   margin-top: 2px;
   display: flex;
@@ -88,18 +88,28 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  font-size: 14px;
+  font-size: 0.87rem;
   font-weight: bold;
-  line-height: 20px;
+  line-height: 1.25rem;
   width: 100%;
-  height: 105px;
+  height: 6.56rem;
   background: rgb(192, 192, 192, 0.03);
   
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
 .lista li {
-  padding-left: 25px;
+  padding-left: 1.56rem;
+}
+
+
+@media (max-width: 600px){
+  .navbar li {
+    text-decoration: none;
+    padding: 0 0.5rem;
+    margin-top: 0.3rem;
+    border: none; 
+  }
 }
 
 

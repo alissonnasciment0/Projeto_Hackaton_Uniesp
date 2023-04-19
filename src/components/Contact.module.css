@@ -2,54 +2,47 @@
 
 .containercontato {
   box-sizing: border-box;
-  width: 1000px;
-  height: 600px;
+  width: 62.5rem;
+  height: 37.5rem;
   display: block;
-  padding:50px;
+  padding: 3rem;
   font-family: "Inter", sans-serif;
-  background: rgba(255, 255, 255,0.02);
-  border-radius:2rem;
-  
-  
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 2rem;
 }
 
 .emailhelp {
   display: flex;
-  width:100%;
+  width: 100%;
   height: 80%;
   justify-content: space-between;
-  padding-left: 60px;
-  padding-right: 40px;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-  
-  
+  padding-left: 3.75rem;
+  padding-right: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .helpcontainer {
   position: right;
-  width:380px;
-  height: 200px;
-
+  width: 23.75rem;
+  height: 12.5rem;
 }
 
 .containertitle {
   width: 100%;
-  height:150px;
+  height: 9.37rem;
 }
 
-.containeremail{
+.containeremail {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(13, 6, 40,0.7);
-  padding: 20px;
-  width:370px;
-  height: 330px;
-  border-radius:0.8rem;
-  
-  
+  background-color: rgb(13, 6, 40, 0.7);
+  padding: 1.25rem;
+  width: 23.12rem;
+  height: 20.62rem;
+  border-radius: 0.8rem;
 }
 
 .titlecontato {
@@ -57,104 +50,96 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  
 }
 
 .title {
-  font-size:3rem;
+  font-size: 3rem;
   color: rgb(245, 245, 245, 0.9);
-  
 }
 
 .subtitle {
-  font-size:1.5rem;
+  font-size: 1.5rem;
   color: rgb(245, 245, 245, 0.7);
   -webkit-font-smoothing: antialiased;
 }
 
 .titlehelp {
-  font-size:1.4rem;
+  font-size: 1.4rem;
   text-align: left;
   color: rgb(245, 245, 245, 0.9);
 }
 
 .subhelp {
-  font-size:1rem;
-  margin-top:1.5rem;
+  font-size: 1rem;
+  margin-top: 1.5rem;
   font-style: oblique;
   color: rgb(245, 245, 245, 0.8);
   -webkit-font-smoothing: antialiased;
 }
 
-
-
-.form{
-  width: 300px;
+.form {
+  width: 18.75rem;
   display: flex;
-  flex-direction: column; 
-  gap:15px;
-  padding-top:10px;
+  flex-direction: column;
+  gap: 0.93rem;
+  padding-top: 0.62rem;
 }
 
 .titleform {
-  font-size:2rem;
+  font-size: 2rem;
   text-align: center;
   color: rgb(245, 245, 245, 0.8);
-  
-  
 }
 
-.input{
-  
-  padding-left:10px;
-  width:300px;
-  height: 30px;
-  border-radius: 4px;
+.input {
+  padding-left: 0.62rem;
+  width: 18.75rem;
+  height: 1.87rem;
+  border-radius: 0.25rem;
   border: 0;
-  font-size:0.8rem; 
+  font-size: 0.8rem;
   color: rgb(245, 245, 245, 0.7);
   background: transparent;
-  border: 0.1px solid rgba(255, 255, 255,0.3);
+  border: 0.1px solid rgba(255, 255, 255, 0.3);
 }
 
-.textarea{
-  margin-bottom: 14px;
-  border-radius: 4px;
+.textarea {
+  margin-bottom: 0.87rem;
+  border-radius: 0.25rem;
   border: 0;
   text-align: left;
-  padding: 5px;
-  width:300px;
-  height: 94px;
+  padding: 0.31rem;
+  width: 18.75rem;
+  height: 5.87rem;
   resize: none;
-  font-size:0.8rem; 
+  font-size: 0.8rem;
   font-family: "Inter", sans-serif;
   color: rgb(245, 245, 245, 0.7);
   background: transparent;
-  border: 0.1px solid rgba(255, 255, 255,0.3);
-  
+  border: 0.1px solid rgba(255, 255, 255, 0.3);
 }
 
-.input:focus ,
+.input:focus,
 .textarea:focus {
   outline: none;
 }
 
-.button{
-  height: 34px;
-  border-radius: 4px;
+.button {
+  height: 2.12rem;
+  border-radius: 0.25rem;
   border: 0;
   cursor: pointer;
-  background:transparent;
+  background: transparent;
   font-size: 1rem;
   padding: 0rem 1rem;
   font-family: "Inter", sans-serif;
   transition: background-color, transform 0.8s;
   color: rgb(245, 245, 245, 0.7);
   font-weight: 500;
-  border: 0.1px solid rgba(255, 255, 255,0.3);
+  border: 0.1px solid rgba(255, 255, 255, 0.3);
 }
 
-.button:hover{
+.button:hover {
   box-shadow: 0 0 1px 0 #fff, 0 0 3px 0 #5e548e, 0 0 5px 0 #7928ca;
   transform: scale(1.01);
 }

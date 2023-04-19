@@ -28,7 +28,7 @@ export function Navbar() {
     {
       id: 4,
       name: "Arthur",
-      url: "",
+      url: "https://github.com/ajvieiraa",
       typeOpenUrl: "_blank",
     },
   ];

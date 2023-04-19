@@ -141,14 +141,14 @@
   position: absolute;
   font-weight: bold;
   font-size: 1.2vw;
-  margin-bottom: 35vh;
+  margin-bottom: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
   color: rgba(245, 245, 245, 1);
-  width: 100vm;
-  height: 4vm;
+  width: 100vw;
+  height: 4vh;
   cursor: pointer;
   background: transparent;
   outline: none;
